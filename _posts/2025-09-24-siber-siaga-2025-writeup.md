@@ -41,8 +41,6 @@ S_______s__________i__________________________
 ```
 
 **Flag:** `SIBER25{s0me71me5_lif3_c4n_b3_a_l1ttl3_p0ta70}`
-> **Warning:** This challenge requires careful character mapping - you only get 4 effective attempts!
-{: .prompt-tip }
 
 ---
 
@@ -93,6 +91,7 @@ For this im trying different combinations to get the flag
 - `repr(open('flag.txt').read())`
 
 The successful payload that bypassed the filter was:
+
 ```python
 __builtins__.__dict__['pr'+'int'](open('flag.txt').read())
 ```
@@ -143,9 +142,6 @@ Recently, our AI Tech Support behaved strangely. During investigation, we discov
 I'm using Github Copilot with Claude Sonnet 4 as a model in this challenge. After a series of interrogation with the chatbot, im able to get the flag.
 
 So, here's the code for solving the challenge. Below is one of the results from executing the program.
-
-<details>
-<summary>So here is the code after the interrogation</summary>
 
 ```python
 import torch
@@ -357,10 +353,14 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-</details>
 
 <br>
 
 ![Adversarial Image](/assets/img/posts/SiberSiaga/DeepOnAdversarial.png "ICECTF{t00_ear1y_f0r_4_ctf}")
 
 **Flag:** `SIBER25{l3arn1ng_m4ch1n3_l3arn1ng}`
+
+---
+## Scoreboard Siber Siaga 2025
+
+![Scoreboard Siber Siaga 2025](/assets/img/posts/SiberSiaga/ScoreboardSiberSiaga.jpg)   
