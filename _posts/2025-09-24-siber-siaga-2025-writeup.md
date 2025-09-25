@@ -8,7 +8,7 @@ author: Mynz
 
 # Siber Siaga 2025 CTF Writeup (Online)
 
-My team, pulupuluultraman has managed to get 9th place and represent IIUM in Code Combat 2025 😆. This is my 1st CTF writeup and this writeup covers my solutions for 5 challenges from the Siber Siaga 2025 CTF competition.
+My team, pulupuluultraman has managed to get 9th place and represent IIUM in Code Combat 2025 😆. This is my 1st CTF writeup and this writeup covers my solutions for 5 challenges from the Siber Siaga 2025 CTF competition. Special thanks to my team members, Jerit3787 & Rizzykun for carrying mee 🥳.
 
 ## Challenge 1: Spelling Bee
 
