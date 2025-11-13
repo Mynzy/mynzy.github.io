@@ -1,12 +1,12 @@
 ---
-title: "Siber Siaga 2025 CTF Writeup"
+title: "Siber Siaga 2025 Writeup"
 date: 2025-09-24 12:00:00 +0800
 categories: [CTF, Writeups, Online]
 tags: [cybersecurity, ctf, siber-siaga, reverse-engineering, web-exploitation, pwn]
 author: Mynz
 ---
 
-# Siber Siaga 2025 CTF Writeup (Online)
+# Siber Siaga 2025 Writeup (Online)
 
 My team, pulupuluultraman has managed to get 9th place and represent IIUM in Code Combat 2025 😆. This is my 1st CTF writeup and this writeup covers my solutions for 5 challenges from the Siber Siaga 2025 CTF competition. Special thanks to my team members, Jerit3787 & Rizzykun for carrying mee 🥳.
 
@@ -21,7 +21,7 @@ Just spell the flag correctly then I will give it to you.
 ### Solution
 Given the connection credentials, each attempt allows only 5 tries, but the 5th attempt never shows results, so effectively only 4 attempts are available.
 
-![Spelling Bee Challenge](/assets/img/posts/SiberSiaga/SpellingBee.png )
+![Spelling Bee Challenge](/assets/img/SiberSiaga/SpellingBee.png )
 
 Here is the result of my try and i combine it to get the flag
 
@@ -56,11 +56,11 @@ To gain entry to the prestige city, you will first need to prove your worth unle
 ### Solution
 This challenge was quite straightforward. Just enter admin and you will get the flag
 
-![Entry to Meta City Interface](/assets/img/posts/SiberSiaga/EntryToMetaCity.png)
+![Entry to Meta City Interface](/assets/img/SiberSiaga/EntryToMetaCity.png)
 _The login interface for Meta City_
 
 
-![Flag Retrieved](/assets/img/posts/SiberSiaga/EntryToMetaCity2.png)
+![Flag Retrieved](/assets/img/SiberSiaga/EntryToMetaCity2.png)
 _Successfully retrieved flag after entering "admin" in the login page_
 
 **Flag:** `SIBER25{w3lc0m3_70_7h3_c00l357_c17y}`
@@ -79,8 +79,8 @@ Choose your path and decide your own fate.
 ### Solution
 Based on the source code given, you can see `flag.txt` which means the server will also have a file named `flag.txt` in it, now we just need to find ways to exploit it.
 
-![A Byte Tales Source Code](/assets/img/posts/SiberSiaga/AByteTalesSourceCode.png)
-![A Byte Tales Source Code](/assets/img/posts/SiberSiaga/AByteTalesSourceCode2.png)
+![A Byte Tales Source Code](/assets/img/SiberSiaga/AByteTalesSourceCode.png)
+![A Byte Tales Source Code](/assets/img/SiberSiaga/AByteTalesSourceCode2.png)
 
 In the code, you can find critical things which are `eval()` functions which can execute any command we put in the story as long as it is not in banned words.
 
@@ -96,7 +96,7 @@ The successful payload that bypassed the filter was:
 __builtins__.__dict__['pr'+'int'](open('flag.txt').read())
 ```
 
-![A Byte Tales Terminal Output](/assets/img/posts/SiberSiaga/AByteTalesTerminal.png)
+![A Byte Tales Terminal Output](/assets/img/SiberSiaga/AByteTalesTerminal.png)
 
 This worked because it split the banned word "print" into parts and reconstructed it at runtime.
 
@@ -122,7 +122,7 @@ apktool d app-debug.apk
 
 After that, im opening vscode and just find SIBER25{
 
-![Flag Search in VS Code](/assets/img/posts/SiberSiaga/GuessPWD.png)
+![Flag Search in VS Code](/assets/img/SiberSiaga/GuessPWD.png)
 
 Sorry for unintended solution 🙏
 
@@ -356,11 +356,11 @@ if __name__ == "__main__":
 
 <br>
 
-![Adversarial Image](/assets/img/posts/SiberSiaga/DeepOnAdversarial.png "ICECTF{t00_ear1y_f0r_4_ctf}")
+![Adversarial Image](/assets/img/SiberSiaga/DeepOnAdversarial.png "ICECTF{t00_ear1y_f0r_4_ctf}")
 
 **Flag:** `SIBER25{l3arn1ng_m4ch1n3_l3arn1ng}`
 
 ---
 ## Scoreboard Siber Siaga 2025
 
-![Scoreboard Siber Siaga 2025](/assets/img/posts/SiberSiaga/ScoreboardSiberSiaga.jpg)   
+![Scoreboard Siber Siaga 2025](/assets/img/SiberSiaga/ScoreboardSiberSiaga.jpg)   
